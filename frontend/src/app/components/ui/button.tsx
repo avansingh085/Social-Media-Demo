@@ -13,7 +13,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           'ring-offset-background transition-colors focus-visible:outline-none',
           'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
           'disabled:pointer-events-none disabled:opacity-50',
-          'bg-primary text-primary-foreground hover:bg-primary/90',
+          'bg-primary text-primary-foreground hover:bg-primary/90 bg-blue-600 text-white px-3 py-3 hover:cursor-pointer',
           
         )  }
         ref={ref}
