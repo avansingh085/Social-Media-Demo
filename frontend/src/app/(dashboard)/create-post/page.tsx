@@ -13,8 +13,9 @@ export default function CreatePostPage() {
   const router = useRouter();
   const [loading,setLoading]=useState(false);
   const onSubmit = async (data: any) => {
-    const token = getToken();
+    setLoading(true);
     await api.post('/posts', data);
+    setLoading(false);
     router.push('/timeline');
   };
 
