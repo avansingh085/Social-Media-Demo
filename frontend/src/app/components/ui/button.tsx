@@ -15,7 +15,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           'disabled:pointer-events-none disabled:opacity-50',
           'bg-primary text-primary-foreground hover:bg-primary/90',
           
-        )}
+        )  }
         ref={ref}
         {...props}
       />

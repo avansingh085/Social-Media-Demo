@@ -12,7 +12,7 @@ export class PostsService {
     ) { }
 
     async create(authorId: string, title: string, description: string) {
-        const post = new this.postModel({ author: authorId, title, description });
+        const post = new this.postModel({ author: new Types.ObjectId(authorId), title, description });
         return post.save();
     }
 
@@ -27,9 +27,9 @@ export class PostsService {
             ...user.following.map(id => new Types.ObjectId(id)),
             new Types.ObjectId(user._id as string),
         ];
-
+        
         return await this.postModel
-            .find({ author: { $in: ids } })
+            .find({ author: { $in: ids } }).populate('author')
             .sort({ createdAt: -1 })
             .exec();
     }

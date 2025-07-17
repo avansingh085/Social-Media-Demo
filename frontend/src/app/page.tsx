@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
     <Layout>
       <h2 className="text-2xl font-semibold">Welcome to the Home Page!</h2>
-      <p>This is the content inside the layout.</p>
+      <p>Social Media Demo</p>
     </Layout>
     </>
   );

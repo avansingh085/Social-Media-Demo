@@ -5,7 +5,6 @@ const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000',
 });
 
-// ✅ Add a request interceptor
 api.interceptors.request.use(
   async (config) => {
     if (typeof window !== 'undefined') {

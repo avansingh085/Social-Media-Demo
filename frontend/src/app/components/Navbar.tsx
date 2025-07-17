@@ -9,7 +9,7 @@ import api from '../lib/axios';
 export default function Navbar() {
     const router = useRouter();
     const [user, setUser] = useState(null);
- console.log(user,"PPPPPPPPPPPPPPPPPPPPPPPPPPP")
+ 
     useEffect(() => {
         const fetchProfile = async () => {
             try {
@@ -33,8 +33,8 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="w-full py-4 border-b flex justify-between px-8">
-            <div className="flex gap-4">
+        <nav className="w-screen py-4 text-white font-medium    flex justify-between px-8 bg-green-400">
+            <div className="flex gap-4 ">
                 {user && (
                     <>
                         <Link href="/timeline">Timeline</Link>
@@ -47,7 +47,7 @@ export default function Navbar() {
             </div>
             <div>
                 {user ? (
-                    <button onClick={handleLogout} className="underline text-sm">
+                    <button onClick={handleLogout} className="bg-white h-8 w-24 text-black font-medium hover:cursor-pointer text-sm">
                         Logout
                     </button>
                 ) : (
