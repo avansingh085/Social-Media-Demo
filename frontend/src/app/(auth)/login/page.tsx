@@ -17,7 +17,7 @@ export default function LoginPage() {
     const res = await api.post('/auth/login', data);
     setToken(res.data.access_token);
     setLoading(false);
-    router.push('/timeline');
+    window.location.href='/timeline';
   };
 
   return (

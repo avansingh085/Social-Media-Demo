@@ -14,10 +14,10 @@ export default function HomePage() {
 
   return (
     <>
-    <Layout>
+    
       <h2 className="text-2xl font-semibold">Welcome to the Home Page!</h2>
       <p>Social Media Demo</p>
-    </Layout>
+    
     </>
   );
 }
